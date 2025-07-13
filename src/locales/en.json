@@ -1,0 +1,21 @@
+{
+  "onboarding": {
+    "screen": {
+      "first-headline": "Welcome to Corex ",
+      "second-headline": "Transform your health journey with personalized workouts, nutrition tracking, and progress insights",
+      "third-headline": "Your personal fitness and nutrition companion",
+      "goal-headline": "Set Your Goals",
+      "goal-secondary": "Dream big, achieve bigger",
+      "goal-disc": "Define your fitness and health objectives and let us create a personalized plan to help you reach them faster.",
+      "progress-screen": "Monitor you're Progress",
+      "progress-sec": "See your transformation",
+      "progress-disc": "Visualize your journey with detailed charts, body measurements, and achievement milestones.",
+      "notif-headline": "Stay Motivated",
+      "notif-second": "Never miss a beat",
+      "notif-disc": "Get personalized reminders, celebrate achievements, and stay consistent with your fitness routine.",
+      "notice-headline": "Important Notice",
+      "notice-seconde": "Personal data is saved localy !",
+      "notice-disc": "For now, your data is stored locally on your device. In the future, we’ll add cloud sync — but until then, uninstalling the app or clearing its cache will erase your progress."
+    }
+  }
+}

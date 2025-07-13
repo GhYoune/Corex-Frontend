@@ -1,0 +1,21 @@
+{
+  "onboarding": {
+    "screen": {
+      "first-headline": "Bienvenue à Corex",
+      "second-headline": "Transformez votre parcours pour la santé avec des séances d'entraînement personnalisées, le suivi de la nutrition et les informations de progrès",
+      "third-headline": "Votre compagnon de fitness et de nutrition personnel",
+      "goal-headline": "Fixez vos objectifs",
+      "goal-secondary": "Rêver grand, réaliser plus grand",
+      "goal-disc": "Définissez vos objectifs de forme physique et de santé et laissez-nous créer un plan personnalisé pour vous aider à les atteindre plus rapidement.",
+      "progress-screen": "Surveillez votre progression",
+      "progress-sec": "Voir votre transformation",
+      "progress-disc": "Visualisez votre voyage avec des graphiques détaillés, des mesures corporelles et des jalons de réussite.",
+      "notif-headline": "Rester motivé",
+      "notif-second": "Ne manquez jamais un battement",
+      "notif-disc": "Obtenez des rappels personnalisés, célébrez les réalisations et restez cohérent avec votre routine de fitness.",
+      "notice-headline": "Avis important",
+      "notice-seconde": "Les données personnelles sont enregistrées locales !",
+      "notice-disc": "Pour l'instant, vos données sont stockées localement sur votre appareil. \nÀ l'avenir, nous allons ajouter Cloud Sync - mais jusque-là, la désinstallation de l'application ou la compensation de son cache effacera vos progrès."
+    }
+  }
+}
