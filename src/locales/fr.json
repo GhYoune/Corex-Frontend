@@ -17,5 +17,9 @@
       "notice-seconde": "Les données personnelles sont enregistrées locales !",
       "notice-disc": "Pour l'instant, vos données sont stockées localement sur votre appareil. \nÀ l'avenir, nous allons ajouter Cloud Sync - mais jusque-là, la désinstallation de l'application ou la compensation de son cache effacera vos progrès."
     }
-  }
+  },
+  "_": {
+    "previous": "Précédent"
+  },
+  "_next": "Suivant"
 }

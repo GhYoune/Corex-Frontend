@@ -13,8 +13,10 @@
    </p>
   </div>
   <div class="nested_btns">
-   <VBtn @click="onboarding.previousScreen()">PREVIOUS</VBtn>
-   <VBtn color="primary" @click="onboarding.nextScreen()">NEXT</VBtn>
+   <VBtn @click="onboarding.previousScreen()">{{ $t("_.previous") }}</VBtn>
+   <VBtn color="primary" @click="onboarding.nextScreen()">{{
+    $t("_next")
+   }}</VBtn>
   </div>
  </div>
 </template>
