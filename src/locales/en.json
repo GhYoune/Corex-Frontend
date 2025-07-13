@@ -17,5 +17,9 @@
       "notice-seconde": "Personal data is saved localy !",
       "notice-disc": "For now, your data is stored locally on your device. In the future, we’ll add cloud sync — but until then, uninstalling the app or clearing its cache will erase your progress."
     }
-  }
+  },
+  "_": {
+    "previous": "Previous"
+  },
+  "_next": "Next"
 }
