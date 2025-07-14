@@ -1,4 +1,5 @@
 <template>
+ <ProgressLinear :progress="progress" />
  <v-window v-model="currentStepIndex" :touch="false">
   <v-window-item v-for="(screen, i) in screens" :key="i">
    <OnboardingScreens
@@ -14,8 +15,9 @@
  import { provide } from "vue";
  import { useOnboarding } from "../../../composables/onboarding/useOnboarding";
  import OnboardingScreens from "./OnboardingScreens/OnboardingScreens.vue";
+ import ProgressLinear from "../../../components/ProgressLinear.vue";
 
- const { screens, currentStepIndex, nextScreen, previousScreen } =
+ const { screens, currentStepIndex, nextScreen, previousScreen, progress } =
   useOnboarding();
  provide("onboarding", {
   screens,

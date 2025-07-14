@@ -1,4 +1,4 @@
-import {  ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
 interface OnboardingScreens {
@@ -58,13 +58,15 @@ export function useOnboarding() {
  const previousScreen = () => {
   if (currentStepIndex.value >= 1) return currentStepIndex.value--;
  };
- watch(currentStepIndex, (value) => {
-  console.log(value);
- });
+const progress = computed(() => {
+ return ((currentStepIndex.value + 1) / screens.length) * 100;
+});
+ 
  return {
   screens,
   currentStepIndex,
   nextScreen,
   previousScreen,
+  progress,
  };
 }
