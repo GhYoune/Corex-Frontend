@@ -13,8 +13,7 @@
    </p>
   </div>
   <div class="nested_btns">
-   <VBtn @click="onboarding.previousScreen()">{{ $t("_.previous") }}</VBtn>
-   <VBtn color="primary" @click="onboarding.nextScreen()">{{
+   <VBtn color="primary" block @click="onboarding.nextScreen()">{{
     $t("_next")
    }}</VBtn>
   </div>
@@ -41,17 +40,16 @@
   overflow: hidden;
   min-height: calc(100vh - 30px);
   .nested_icon {
-   flex: 0 0 auto;
+   flex: 1 0 auto;
   }
   .card_wrapper {
    flex: 1 0 auto; // Takes remaining space but won’t force scroll
    overflow: hidden;
   }
   .nested_btns {
-   flex-grow: 1; // Buttons always visible at bottom
    display: flex;
-   justify-content: space-between;
-   align-items: end;
+   justify-content: center;
+   align-items: center;
    width: 100%;
    padding: 10px;
   }
