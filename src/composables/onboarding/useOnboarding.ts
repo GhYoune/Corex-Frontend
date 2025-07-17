@@ -8,6 +8,10 @@ interface OnboardingScreens {
  secondaryHeadLine?: string;
  description?: string;
 }
+interface UserInfoFormScreens {
+ stepIndex: number;
+ formHeadline: string;
+}
 export function useOnboarding() {
  const { t } = useI18n();
 
@@ -58,10 +62,10 @@ export function useOnboarding() {
  const previousScreen = () => {
   if (currentStepIndex.value >= 1) return currentStepIndex.value--;
  };
-const progress = computed(() => {
- return ((currentStepIndex.value + 1) / screens.length) * 100;
-});
- 
+ const progress = computed(() => {
+  return ((currentStepIndex.value + 1) / screens.length) * 100;
+ });
+
  return {
   screens,
   currentStepIndex,
