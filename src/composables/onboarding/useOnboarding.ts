@@ -1,4 +1,4 @@
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 interface OnboardingScreens {
@@ -8,9 +8,14 @@ interface OnboardingScreens {
  secondaryHeadLine?: string;
  description?: string;
 }
+interface UserInfoFormInputs {
+ name: string;
+ component: any;
+ props: Record<string, any>;
+}
 interface UserInfoFormScreens {
- stepIndex: number;
- formHeadline: string;
+ stepsIndex: number;
+ fields: UserInfoFormInputs[];
 }
 export function useOnboarding() {
  const { t } = useI18n();
@@ -53,6 +58,9 @@ export function useOnboarding() {
    description: t("onboarding.screen.notice-disc"),
   },
  ];
+
+ const userInfoScreens: UserInfoFormScreens[] = [];
+
  const nextScreen = () => {
   if (currentStepIndex.value >= screens.length - 1) return;
   else {
