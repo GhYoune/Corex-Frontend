@@ -1,5 +1,7 @@
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import TextFiledInput from "../../components/FormComponents/TextFiledInput.vue";
+import type { User } from "../../model/User";
 
 interface OnboardingScreens {
  stepsIndex: number;
@@ -8,18 +10,10 @@ interface OnboardingScreens {
  secondaryHeadLine?: string;
  description?: string;
 }
-interface UserInfoFormInputs {
- name: string;
- component: any;
- props: Record<string, any>;
-}
-interface UserInfoFormScreens {
- stepsIndex: number;
- fields: UserInfoFormInputs[];
-}
+
 export function useOnboarding() {
  const { t } = useI18n();
-
+ const formInputs = ref<User>();
  const currentStepIndex = ref<number>(0);
  const screens: OnboardingScreens[] = [
   {
@@ -59,10 +53,11 @@ export function useOnboarding() {
   },
  ];
 
- const userInfoScreens: UserInfoFormScreens[] = [];
+ const formInputScreens = [{ stepsIndex: 6, component: TextFiledInput }];
 
  const nextScreen = () => {
-  if (currentStepIndex.value >= screens.length - 1) return;
+  if (currentStepIndex.value >= screens.length + formInputScreens.length - 1)
+   return;
   else {
    return currentStepIndex.value++;
   }
@@ -80,5 +75,7 @@ export function useOnboarding() {
   nextScreen,
   previousScreen,
   progress,
+  formInputScreens,
+  formInputs,
  };
 }
