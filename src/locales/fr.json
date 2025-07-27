@@ -26,5 +26,7 @@
   },
   "_next": "Suivant",
   "_firstName": "Prénom",
-  "_lastName": "Nom de famille"
+  "_lastName": "Nom de famille",
+  "_male": "Homme",
+  "_female": "Femelle"
 }

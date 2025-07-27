@@ -26,5 +26,7 @@
   },
   "_next": "Next",
   "_firstName": "First Name",
-  "_lastName": "Last Name"
+  "_lastName": "Last Name",
+  "_male": "Male",
+  "_female": "Female"
 }
