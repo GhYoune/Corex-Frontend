@@ -18,7 +18,9 @@
     variant="outlined"></v-text-field>
 
    <DateInput />
+
    <ChipForm />
+
    <div class="d-flex justify-space-evenly w-100 py-4">
     <v-text-field
      type="number"
@@ -55,9 +57,9 @@
 
 <script setup lang="ts">
  import { inject, ref } from "vue";
- import type { User } from "../../model/User";
- import ChipForm from "./common/ChipForm.vue";
- import DateInput from "./common/DateInput.vue";
+ import type { User } from "../../../../model/User";
+ import ChipForm from "@/components/FormComponents/common/ChipForm.vue";
+ import DateInput from "@/components/FormComponents/common/DateInput.vue";
  const modelValue = defineModel<User>();
  const firstName = ref<string>("");
  const lastName = ref<string>("");

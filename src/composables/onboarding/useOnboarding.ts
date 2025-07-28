@@ -1,6 +1,6 @@
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
-import TextFiledInput from "../../components/FormComponents/TextFiledInput.vue";
+import OnboardingFormScreens from "../../views/Anonymous/Onboarding/OnboardingScreens/OnboardingFormScreens.vue";
 import type { User } from "../../model/User";
 
 interface OnboardingScreens {
@@ -53,7 +53,7 @@ export function useOnboarding() {
   },
  ];
 
- const formInputScreens = [{ stepsIndex: 6, component: TextFiledInput }];
+ const formInputScreens = [{ stepsIndex: 6, component: OnboardingFormScreens }];
 
  const nextScreen = () => {
   if (currentStepIndex.value >= screens.length + formInputScreens.length - 1)
