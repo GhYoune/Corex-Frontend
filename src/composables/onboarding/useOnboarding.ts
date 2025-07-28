@@ -1,4 +1,4 @@
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import TextFiledInput from "../../components/FormComponents/TextFiledInput.vue";
 import type { User } from "../../model/User";
@@ -66,7 +66,10 @@ export function useOnboarding() {
   if (currentStepIndex.value >= 1) return currentStepIndex.value--;
  };
  const progress = computed(() => {
-  return ((currentStepIndex.value + 1) / screens.length) * 100;
+  return (
+   ((currentStepIndex.value + 1) / (screens.length + formInputScreens.length)) *
+   100
+  );
  });
 
  return {
