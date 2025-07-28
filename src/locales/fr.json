@@ -18,7 +18,8 @@
       "notice-disc": "Pour l'instant, vos données sont stockées localement sur votre appareil. \nÀ l'avenir, nous allons ajouter Cloud Sync - mais jusque-là, la désinstallation de l'application ou la compensation de son cache effacera vos progrès."
     },
     "userInfo": {
-      "firstName": "Prénom"
+      "firstName": "Prénom",
+      "headline": "Commençons par vos informations personnelles"
     }
   },
   "_": {
@@ -28,5 +29,7 @@
   "_firstName": "Prénom",
   "_lastName": "Nom de famille",
   "_male": "Homme",
-  "_female": "Femelle"
+  "_female": "Femelle",
+  "_height": "Hauteur (cm)",
+  "_weight": "Poids (kg)"
 }

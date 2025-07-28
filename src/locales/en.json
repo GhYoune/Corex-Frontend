@@ -18,7 +18,8 @@
       "notice-disc": "For now, your data is stored locally on your device. In the future, we’ll add cloud sync — but until then, uninstalling the app or clearing its cache will erase your progress."
     },
     "userInfo": {
-      "firstName": "First Name"
+      "firstName": "First Name",
+      "headline": "Let's start with your Personal info"
     }
   },
   "_": {
@@ -28,5 +29,7 @@
   "_firstName": "First Name",
   "_lastName": "Last Name",
   "_male": "Male",
-  "_female": "Female"
+  "_female": "Female",
+  "_height": "Height (cm)",
+  "_weight": "Weight (Kg)"
 }
