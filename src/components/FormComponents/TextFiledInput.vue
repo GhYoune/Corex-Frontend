@@ -1,49 +1,54 @@
 <template>
- <h1 class="text-primary mt-3">Let's start with your Personal info</h1>
+ <div class="wrapper_inputs">
+  <h1 class="mt-3">{{ $t("onboarding.userInfo.headline") }}</h1>
 
- <div class="mt-6 d-flex flex-column wrapper_inputs">
-  <v-text-field
-   :label="$t('_firstName')"
-   v-model="firstName"
-   @input="fullNameAssemble"
-   variant="outlined"></v-text-field>
-  <v-text-field
-   :label="$t('_lastName')"
-   v-model="lastName"
-   @input="fullNameAssemble"
-   variant="outlined"></v-text-field>
-  <DateInput />
-  <ChipForm />
-  <
-  <div class="d-flex justify-space-evenly w-100">
+  <div class="mt-6 d-flex flex-column inputs">
    <v-text-field
-    type="number"
-    label="Height (cm)"
-    variant="outlined"
-    class="ma-2 flex-grow-1 text-center"
-    :style="{
-     height: '50px',
-    }"
-    density="compact"
-    hide-details
-    single-line />
+    :label="$t('_firstName')"
+    v-model="firstName"
+    @input="fullNameAssemble"
+    clearable
+    variant="outlined"></v-text-field>
 
    <v-text-field
-    type="number"
-    label="Weight (kg)"
-    variant="outlined"
-    class="ma-2 flex-grow-1 text-center"
-    :style="{
-     height: '50px',
-    }"
-    density="compact"
-    hide-details
-    single-line />
+    :label="$t('_lastName')"
+    v-model="lastName"
+    @input="fullNameAssemble"
+    clearable
+    variant="outlined"></v-text-field>
+
+   <DateInput />
+   <ChipForm />
+   <div class="d-flex justify-space-evenly w-100 py-4">
+    <v-text-field
+     type="number"
+     :label="$t('_height')"
+     variant="outlined"
+     clearable
+     class="ma-2 flex-grow-1 text-center"
+     :style="{
+      height: '50px',
+     }" />
+
+    <v-text-field
+     type="number"
+     :label="$t('_weight')"
+     variant="outlined"
+     clearable
+     class="ma-2 flex-grow-1 text-center"
+     :style="{
+      height: '50px',
+     }" />
+   </div>
   </div>
   <div class="nested_btns">
-   <VBtn color="primary" block @click="onboarding.nextScreen()">{{
-    $t("_next")
-   }}</VBtn>
+   <VBtn
+    color="primary"
+    class="rounded-lg next-btn"
+    block
+    @click="onboarding.nextScreen()"
+    >{{ $t("_next") }}</VBtn
+   >
   </div>
  </div>
 </template>
@@ -51,8 +56,8 @@
 <script setup lang="ts">
  import { inject, ref } from "vue";
  import type { User } from "../../model/User";
- import DateInput from "./common/DateInput.vue";
  import ChipForm from "./common/ChipForm.vue";
+ import DateInput from "./common/DateInput.vue";
  const modelValue = defineModel<User>();
  const firstName = ref<string>("");
  const lastName = ref<string>("");
@@ -67,15 +72,21 @@
 
 <style lang="scss">
  .wrapper_inputs {
-  display: block;
-  overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  h1 {
+   font-size: 26px;
+   margin-top: 10px;
+   flex-shrink: 1;
+  }
+  .inputs {
+   flex-shrink: 1;
+  }
   .nested_btns {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   position: absolute;
    width: 100%;
-   padding: 10px;
+   bottom: 50px;
   }
  }
 </style>

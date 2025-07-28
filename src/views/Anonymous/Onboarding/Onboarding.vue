@@ -1,6 +1,6 @@
 <template>
  <ProgressLinear :progress="progress" />
- <v-window v-model="currentStepIndex" :touch="false">
+ <v-window v-model="currentStepIndex" :touch="false" >
   <v-window-item v-for="(screen, i) in screens" :key="i">
    <OnboardingScreens
     :icon="screen.icon"

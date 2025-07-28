@@ -11,6 +11,7 @@
     v-model="formattedDate"
     label="Select a date"
     readonly
+    clearable
     variant="outlined"></v-text-field>
   </template>
 
