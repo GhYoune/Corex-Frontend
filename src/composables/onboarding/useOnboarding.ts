@@ -1,7 +1,8 @@
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
-import OnboardingFormScreens from "../../views/Anonymous/Onboarding/OnboardingScreens/OnboardingFormScreens.vue";
+import OnboardingPersonalInfoScreen from "../../views/Anonymous/Onboarding/OnboardingScreens/OnboardingPersonalInfoScreen.vue";
 import type { User } from "../../model/User";
+import OnboardingPersonalGoalsScreen from "@/views/Anonymous/Onboarding/OnboardingScreens/OnboardingPersonalGoalsScreen.vue";
 
 interface OnboardingScreens {
  stepsIndex: number;
@@ -53,7 +54,10 @@ export function useOnboarding() {
   },
  ];
 
- const formInputScreens = [{ stepsIndex: 6, component: OnboardingFormScreens }];
+ const formInputScreens = [
+  { stepsIndex: 6, component: OnboardingPersonalInfoScreen },
+  { stepsIndex: 7, component: OnboardingPersonalGoalsScreen },
+ ];
 
  const nextScreen = () => {
   if (currentStepIndex.value >= screens.length + formInputScreens.length - 1)
