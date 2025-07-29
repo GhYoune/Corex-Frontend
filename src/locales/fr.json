@@ -31,5 +31,12 @@
   "_male": "Homme",
   "_female": "Femelle",
   "_height": "Hauteur (cm)",
-  "_weight": "Poids (kg)"
+  "_weight": "Poids (kg)",
+  "validation": {
+    "required": {
+      "name": "Le prénom est requis",
+      "lastname": "Le nom de famille est requis",
+      "date": "L'âge est nécessaire"
+    }
+  }
 }

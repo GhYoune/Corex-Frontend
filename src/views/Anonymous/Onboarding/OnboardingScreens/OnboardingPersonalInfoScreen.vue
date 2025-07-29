@@ -48,7 +48,7 @@
     color="primary"
     class="rounded-lg next-btn"
     block
-    @click="onboarding.nextScreen()"
+    @click="validation"
     >{{ $t("_next") }}</VBtn
    >
   </div>
@@ -60,11 +60,31 @@
  import type { User } from "../../../../model/User";
  import ChipForm from "@/components/FormComponents/common/ChipForm.vue";
  import DateInput from "@/components/FormComponents/common/DateInput.vue";
+ import { formValidationSchema } from "@/composables/app/formValidationSchema";
+
  const modelValue = defineModel<User>();
  const firstName = ref<string>("");
  const lastName = ref<string>("");
  const onboarding = inject("onboarding") as any;
+ const errors = ref<{ firstName?: string; lastName?: string }>({});
 
+ const validate = formValidationSchema();
+ const validation = () => {
+  const result = validate.safeParse({
+   firstName: firstName.value,
+   lastName: lastName.value,
+  });
+  if (!result.success) {
+   errors.value = {};
+   for (const issue of result.error.issues) {
+    errors.value[issue.path[0] as keyof typeof errors.value] = issue.message;
+   }
+   return false;
+  } else {
+   errors.value = {};
+   return true;
+  }
+ };
  const fullNameAssemble = () => {
   if (modelValue.value) {
    modelValue.value.name = `${firstName.value} ${lastName.value}`.trim();
