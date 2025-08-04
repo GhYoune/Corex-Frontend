@@ -36,7 +36,17 @@
     "required": {
       "name": "Le prénom est requis",
       "lastname": "Le nom de famille est requis",
-      "date": "L'âge est nécessaire"
+      "date": "L'âge est nécessaire",
+      "password": "Mot de passe requis",
+      "activity": "Le niveau d'activité est requis",
+      "goal_type": "Un objectif est requis"
+    },
+    "invalid": {
+      "email": "Format de messagerie invalide",
+      "number": "Doit être un nombre",
+      "height": "Hauteur minimum 100 cm",
+      "weight": "Le poids minimum est de 40 kg",
+      "maxWeight": "Le poids maximum est de 200 kg"
     }
   }
 }

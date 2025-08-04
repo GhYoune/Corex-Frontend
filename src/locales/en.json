@@ -36,7 +36,17 @@
     "required": {
       "name": "First name is Required",
       "lastname": "Last name is required",
-      "date": "Age is required"
+      "date": "Age is required",
+      "password": "Password required",
+      "activity": "Activity level is required",
+      "goal_type": "Goal is required"
+    },
+    "invalid": {
+      "email": "Email format invalid",
+      "number": "Must be a number",
+      "height": "Minimum height 100cm",
+      "weight": "Minimum weight is 40 kg",
+      "maxWeight": "Maximum weight is 200kg"
     }
   }
 }
