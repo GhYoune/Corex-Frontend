@@ -20,6 +20,11 @@
     "userInfo": {
       "firstName": "First Name",
       "headline": "Let's start with your Personal info"
+    },
+    "userObjective": {
+      "headline": "What's your objectif ?",
+      "objectiveHeadline1": "Lose weight",
+      "objectivesub1": "Burn fat and refine my figure"
     }
   },
   "_": {

@@ -20,6 +20,11 @@
     "userInfo": {
       "firstName": "Prénom",
       "headline": "Commençons par vos informations personnelles"
+    },
+    "userObjective": {
+      "headline": "Quel est votre objectif ?",
+      "objectiveHeadline1": "Perdre du poids",
+      "objectivesub1": "Brûler les graisses et affiner ma silhouette"
     }
   },
   "_": {
