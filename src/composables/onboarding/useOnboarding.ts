@@ -15,7 +15,7 @@ interface OnboardingScreens {
 export function useOnboarding() {
  const { t } = useI18n();
  const formInputs = ref<User>();
- const currentStepIndex = ref<number>(0);
+ const currentStepIndex = ref<number>(6);
  const screens: OnboardingScreens[] = [
   {
    stepsIndex: 0,
